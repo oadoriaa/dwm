@@ -212,11 +212,8 @@ static void focus(Client *c);
 static void focusin(XEvent *e);
 static void focusmon(const Arg *arg);
 static void focusstack(const Arg *arg);
-<<<<<<< HEAD
 static pid_t getparentprocess(pid_t p);
-=======
 static Atom getatomprop(Client *c, Atom prop);
->>>>>>> systray
 static int getrootptr(int *x, int *y);
 static long getstate(Window w);
 static unsigned int getsystraywidth();
@@ -260,12 +257,9 @@ static void setup(void);
 static void showhide(Client *c);
 static void sigchld(int unused);
 static void spawn(const Arg *arg);
-<<<<<<< HEAD
 static int stackpos(const Arg *arg);
 static Client *swallowingclient(Window w);
-=======
 static Monitor *systraytomon(Monitor *m);
->>>>>>> systray
 static void tag(const Arg *arg);
 static void tagmon(const Arg *arg);
 static Client *termforwin(const Client *c);
@@ -910,17 +904,13 @@ destroynotify(XEvent *e)
 
 	if ((c = wintoclient(ev->window)))
 		unmanage(c, 1);
-<<<<<<< HEAD
-
 	else if ((c = swallowingclient(ev->window)))
 		unmanage(c->swallowing, 1);
-=======
 	else if ((c = wintosystrayicon(ev->window))) {
 		removesystrayicon(c);
 		resizebarwin(selmon);
 		updatesystray();
 	}
->>>>>>> systray
 }
 
 void

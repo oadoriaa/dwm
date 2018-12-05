@@ -228,11 +228,8 @@ static void setup(void);
 static void showhide(Client *c);
 static void sigchld(int unused);
 static void spawn(const Arg *arg);
-<<<<<<< HEAD
 static int stackpos(const Arg *arg);
-=======
 static Client *swallowingclient(Window w);
->>>>>>> swallow
 static void tag(const Arg *arg);
 static void tagmon(const Arg *arg);
 static Client *termforwin(const Client *c);
